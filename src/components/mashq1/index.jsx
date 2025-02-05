@@ -43,9 +43,12 @@ function Todo() {
   
   function removee(id) {
     console.log(id);
-    fetch(`https://jsonplaceholder.typicode.com/todos/${id}`, {
-      method: "DELETE",
-    })
+    function test() {
+      fetch(`https://jsonplaceholder.typicode.com/todos/${id}`, {
+        method: "DELETE",
+      });
+    }
+    test()
   }
   return (
     <>
