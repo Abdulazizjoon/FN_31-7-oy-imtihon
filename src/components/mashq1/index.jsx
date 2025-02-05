@@ -18,7 +18,7 @@ function Todo() {
   console.log(data);
 
   function postApi(newuser) {
-    return axios.post("https://jsonplaceholder.typicode.com/users", newuser);
+    return axios.post("https://jsonplaceholder.typicode.com/todo", newuser);
   }
   let obj = {
     userId:Date.now(),
@@ -43,10 +43,9 @@ function Todo() {
   
   function removee(id) {
     console.log(id);
-    function postApi() {
-      return axios.post(`https://jsonplaceholder.typicode.com/todos/${id}`);
-    }
-    
+    fetch(`https://jsonplaceholder.typicode.com/todos/${id}`, {
+      method: "DELETE",
+    })
   }
   return (
     <>
